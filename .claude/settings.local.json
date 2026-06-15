@@ -50,7 +50,16 @@
       "Read(//e/ProjectSave/GeminiProject/GameDocs/**)",
       "Bash(done)",
       "WebFetch(domain:www.kairogameguides.com)",
-      "Bash(du:*)"
+      "Bash(du:*)",
+      "WebFetch(domain:www.neoseeker.com)",
+      "WebFetch(domain:primagames.com)",
+      "WebFetch(domain:gameworldobserver.com)",
+      "WebFetch(domain:softwareinc.coredumping.com)",
+      "WebFetch(domain:fogu.com)",
+      "WebFetch(domain:gamerant.com)",
+      "Bash(grep:*)",
+      "Bash(do mkdir:*)",
+      "Bash(bash:*)"
     ]
   }
 }
