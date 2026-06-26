@@ -59,7 +59,12 @@
       "WebFetch(domain:gamerant.com)",
       "Bash(grep:*)",
       "Bash(do mkdir:*)",
-      "Bash(bash:*)"
+      "Bash(bash:*)",
+      "WebFetch(domain:letsbuildazoo.fandom.com)",
+      "WebFetch(domain:gameplay.tips)",
+      "WebFetch(domain:gamepretty.com)",
+      "Bash(find .:*)",
+      "WebFetch(domain:majesty.fandom.com)"
     ]
   }
 }
