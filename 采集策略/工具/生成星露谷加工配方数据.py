@@ -538,7 +538,7 @@ def render_recipe_document(
     if cooking:
         output_lines.append("[上一篇：加工配方数据总览](./加工配方数据总览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：制作配方数据总览](./制作配方数据总览.md)")
     else:
-        output_lines.append("[上一篇：烹饪配方数据总览](./烹饪配方数据总览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：动物怪物数据总览](./动物怪物数据总览.md)")
+        output_lines.append("[上一篇：烹饪配方数据总览](./烹饪配方数据总览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：动物数据总览](./动物数据总览.md)")
     output_lines.append("")
     return "\n".join(output_lines)
 
