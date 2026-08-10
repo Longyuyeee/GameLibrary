@@ -67,7 +67,7 @@ NONDATA_BASELINE = {
     LEGACY: (19, 0, "已完成"),
     GAME / "机制分析" / "NPC社交系统.md": (7, 5, "已完成"),
     GAME / "机制分析" / "作物种植系统.md": (7, 6, "已完成"),
-    GAME / "机制分析" / "剧情与故事系统.md": (77, 1, "采集中"),
+    GAME / "机制分析" / "剧情与故事系统.md": (18, 0, "已完成"),
     GAME / "机制分析" / "加工制造系统.md": (53, 14, "部分完成"),
     GAME / "机制分析" / "地图场景系统.md": (213, 8, "采集中"),
     GAME / "机制分析" / "战斗探索系统.md": (157, 11, "部分完成"),
@@ -76,9 +76,9 @@ NONDATA_BASELINE = {
     GAME / "机制分析" / "经济系统.md": (243, 10, "采集中"),
     GAME / "机制分析" / "道具升级系统.md": (19, 0, "已完成"),
     GAME / "特色文档" / "团队与开发历程.md": (60, 4, "采集中"),
-    GAME / "特色文档" / "角色弧线深度解析.md": (34, 18, "采集中"),
-    GAME / "特色文档" / "爷爷评价与完美追踪.md": (209, 6, "采集中"),
-    GAME / "特色文档" / "社区中心与Joja路线.md": (300, 6, "采集中"),
+    GAME / "特色文档" / "角色弧线深度解析.md": (15, 0, "已完成"),
+    GAME / "特色文档" / "爷爷评价与完美追踪.md": (129, 5, "已完成"),
+    GAME / "特色文档" / "社区中心与Joja路线.md": (725, 5, "已完成"),
     GAME / "特色文档" / "齐先生的挑战与姜岛.md": (317, 9, "采集中"),
 }
 
@@ -258,10 +258,10 @@ def main() -> None:
         status_counts[status] += 1
         nondata_rows += actual_rows
         nondata_urls += actual_urls
-    expected_status_summary = "非数值文档 16 份中，5 份已完成、2 份部分完成、9 份采集中"
+    expected_status_summary = "非数值文档 16 份中，9 份已完成、2 份部分完成、5 份采集中"
     if expected_status_summary not in audit:
         errors.append(f"审计记录缺少：{expected_status_summary}")
-    if status_counts != {"已完成": 5, "部分完成": 2, "采集中": 9}:
+    if status_counts != {"已完成": 9, "部分完成": 2, "采集中": 5}:
         errors.append(f"非数值文档状态基线漂移：{status_counts}")
 
     plan = PLAN.read_text(encoding="utf-8")
@@ -290,8 +290,8 @@ def main() -> None:
         f"audit: game_docs={len(actual_game_docs)}/32, breadcrumbs={breadcrumb_count}/32, "
         f"child_docs={len(CHILDREN)}/31, continuous_nav={footer_count}/31, "
         "overview_order=31/31, legacy_duplicates=0, nondata_docs=16/16, "
-        f"nondata_rows={nondata_rows}/1890, external_urls={nondata_urls}/107, "
-        "nondata_status=5_complete+2_partial+9_collecting, "
+        f"nondata_rows={nondata_rows}/2157, external_urls={nondata_urls}/86, "
+        "nondata_status=9_complete+2_partial+5_collecting, "
         f"audited_docs={len(AUDITED_DOCS)}, local_links={local_links}, "
         f"anchors={anchor_links}, broken_links=0"
     )
