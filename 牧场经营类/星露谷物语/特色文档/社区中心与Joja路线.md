@@ -1,3 +1,5 @@
+[项目首页](../../../README.md) > [牧场经营类](../../_index.md) > [星露谷物语概览](../游戏概览.md) > 社区中心与Joja路线
+
 # 社区中心与Joja路线
 ![社区中心](https://stardewvalleywiki.com/mediawiki/images/d/db/Community_Center_Inside.png)
 
@@ -524,3 +526,7 @@
 - [Stardew Valley Wiki - Bundles](https://stardewvalleywiki.com/Bundles)
 - [Stardew Valley Wiki - Movie Theater](https://stardewvalleywiki.com/Movie_Theater)
 - [Stardew Valley Wiki - Missing Bundle](https://stardewvalleywiki.com/Missing_Bundle)
+
+---
+
+[上一篇：爷爷评价与完美追踪](./爷爷评价与完美追踪.md) · [返回游戏概览](../游戏概览.md) · [下一篇：齐先生的挑战与姜岛](./齐先生的挑战与姜岛.md)
