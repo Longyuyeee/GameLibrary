@@ -41,6 +41,8 @@ CHILDREN = [
     ChildDocument("NPC日程数据总览", GAME / "数值数据" / "NPC日程数据总览.md"),
     ChildDocument("NPC事件数据总览", GAME / "数值数据" / "NPC事件数据总览.md"),
     ChildDocument("作物数据总览", GAME / "数值数据" / "作物数据总览.md"),
+    ChildDocument("鱼类数据总览", GAME / "数值数据" / "鱼类数据总览.md"),
+    ChildDocument("出货收集数据总览", GAME / "数值数据" / "出货收集数据总览.md"),
     ChildDocument("加工配方数据总览", GAME / "数值数据" / "加工配方数据总览.md"),
     ChildDocument("烹饪配方数据总览", GAME / "数值数据" / "烹饪配方数据总览.md"),
     ChildDocument("制作配方数据总览", GAME / "数值数据" / "制作配方数据总览.md"),
@@ -69,9 +71,9 @@ NONDATA_BASELINE = {
     GAME / "机制分析" / "作物种植系统.md": (7, 6, "已完成"),
     GAME / "机制分析" / "剧情与故事系统.md": (18, 0, "已完成"),
     GAME / "机制分析" / "加工制造系统.md": (53, 14, "部分完成"),
-    GAME / "机制分析" / "地图场景系统.md": (213, 8, "采集中"),
+    GAME / "机制分析" / "地图场景系统.md": (201, 8, "采集中"),
     GAME / "机制分析" / "战斗探索系统.md": (157, 11, "部分完成"),
-    GAME / "机制分析" / "时间季节系统.md": (155, 7, "采集中"),
+    GAME / "机制分析" / "时间季节系统.md": (125, 7, "采集中"),
     GAME / "机制分析" / "畜牧养殖系统.md": (20, 2, "已完成"),
     GAME / "机制分析" / "经济系统.md": (243, 10, "采集中"),
     GAME / "机制分析" / "道具升级系统.md": (19, 0, "已完成"),
@@ -235,8 +237,8 @@ def main() -> None:
 
     audit = AUDIT.read_text(encoding="utf-8")
     for value in (
-        "32/32 份文档具备顶部面包屑",
-        "31/31 份子文档具备连续导航",
+        "34/34 份文档具备顶部面包屑",
+        "33/33 份子文档具备连续导航",
         "非数值文档审计矩阵",
         "根目录历史汇总已迁移为索引",
     ):
@@ -287,10 +289,10 @@ def main() -> None:
         raise AssertionError("\n".join(errors))
 
     print(
-        f"audit: game_docs={len(actual_game_docs)}/32, breadcrumbs={breadcrumb_count}/32, "
-        f"child_docs={len(CHILDREN)}/31, continuous_nav={footer_count}/31, "
-        "overview_order=31/31, legacy_duplicates=0, nondata_docs=16/16, "
-        f"nondata_rows={nondata_rows}/2157, external_urls={nondata_urls}/86, "
+        f"audit: game_docs={len(actual_game_docs)}/34, breadcrumbs={breadcrumb_count}/34, "
+        f"child_docs={len(CHILDREN)}/33, continuous_nav={footer_count}/33, "
+        "overview_order=33/33, legacy_duplicates=0, nondata_docs=16/16, "
+        f"nondata_rows={nondata_rows}/2115, external_urls={nondata_urls}/86, "
         "nondata_status=9_complete+2_partial+5_collecting, "
         f"audited_docs={len(AUDITED_DOCS)}, local_links={local_links}, "
         f"anchors={anchor_links}, broken_links=0"

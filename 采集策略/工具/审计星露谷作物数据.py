@@ -171,7 +171,7 @@ def main() -> None:
     required_cross_links = [
         (CROP_DOC, "./NPC事件数据总览.md"),
         (CROP_DOC, "../机制分析/作物种植系统.md"),
-        (CROP_DOC, "./加工配方数据总览.md"),
+        (CROP_DOC, "./鱼类数据总览.md"),
         (MECHANISM_DOC, "../数值数据/作物数据总览.md"),
         (EVENT_DOC, "./作物数据总览.md"),
         (OVERVIEW_DOC, "./数值数据/作物数据总览.md"),
