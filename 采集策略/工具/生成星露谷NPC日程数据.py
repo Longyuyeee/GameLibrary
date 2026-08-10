@@ -593,7 +593,7 @@ def render_document(schedules: list[VillagerSchedule]) -> str:
             "[上一篇：NPC关系数值总览](./NPC关系数值总览.md) · "
             "[返回NPC数据总览](./NPC数据总览.md) · "
             "[返回游戏概览](../游戏概览.md) · "
-            "[下一篇：作物数据总览](./作物数据总览.md)",
+            "[下一篇：NPC事件数据总览](./NPC事件数据总览.md)",
             "",
         ]
     )
