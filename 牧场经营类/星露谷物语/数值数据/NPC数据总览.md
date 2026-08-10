@@ -17,7 +17,7 @@
 | 数量差异 | 0 |
 | 本文规定字段 | 中文名、英文名、生日、送礼能力、关系类型、详细数据入口 |
 | 名册字段完整率 | 46 / 46，100% |
-| NPC 数据域状态 | **采集中**：名册、礼物偏好和关系数值子域完成；日程与事件子域尚未验收 |
+| NPC 数据域状态 | **采集中**：名册、礼物偏好、关系数值和日程子域完成；爱心事件子域尚未验收 |
 
 ## 一、NPC 数据域结构
 
@@ -26,56 +26,56 @@
 | 居民名册 | 本文 | 已完成 | 官方 Villagers 页面 46 / 46 人 |
 | 礼物偏好 | [NPC礼物数据总览](./NPC礼物数据总览.md) | 已完成 | 34 / 34 位可送礼居民，五档偏好规则和个人覆盖项 |
 | 关系数值 | [NPC关系数值总览](./NPC关系数值总览.md) | 已完成 | 点数、增减、礼物倍率、衰减、公共活动、恋爱、婚姻、室友、离婚与记忆 9 / 9 规则族 |
-| 日程 | `NPC日程数据总览.md` | 待采集 | 季节、日期、天气、节日、婚后及特殊状态日程 |
+| 日程 | [NPC日程数据总览](./NPC日程数据总览.md) | 已完成 | 34 / 34 人；英文主源 220 分区、622 分支、3,066 行，中文源完整并列，总计保留 6,115 行 |
 | 爱心事件 | `NPC事件数据总览.md` | 待采集 | 触发心数、地点、时间、天气、前置、选择与后果 |
 
-机制解读见 [NPC社交系统](../机制分析/NPC社交系统.md)。未创建的两份数据文档不会计入已完成文档数；创建后必须先完成全集与字段对账。
+机制解读见 [NPC社交系统](../机制分析/NPC社交系统.md)。尚未创建的事件数据文档不计入已完成文档数；创建后必须先完成全集与字段对账。
 
 ## 二、可送礼居民（34/34）
 
 ### 2.1 婚恋候选人（12/12）
 
-| # | 中文名 | 英文名 | 生日 | 送礼 | 关系类型 | 礼物数据 |
+| # | 中文名 | 英文名 | 生日 | 送礼 | 关系类型 | 详细数据 |
 |:--:|------|------|------|:--:|------|------|
-| 1 | 亚历克斯 | Alex | 夏季 13日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#01-亚历克斯-alex) |
-| 2 | 艾利欧特 | Elliott | 秋季 5日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#02-艾利欧特-elliott) |
-| 3 | 哈维 | Harvey | 冬季 14日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#03-哈维-harvey) |
-| 4 | 山姆 | Sam | 夏季 17日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#04-山姆-sam) |
-| 5 | 塞巴斯蒂安 | Sebastian | 冬季 10日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#05-塞巴斯蒂安-sebastian) |
-| 6 | 谢恩 | Shane | 春季 20日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#06-谢恩-shane) |
-| 7 | 阿比盖尔 | Abigail | 秋季 13日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#07-阿比盖尔-abigail) |
-| 8 | 艾米丽 | Emily | 春季 27日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#08-艾米丽-emily) |
-| 9 | 海莉 | Haley | 春季 14日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#09-海莉-haley) |
-| 10 | 莉亚 | Leah | 冬季 23日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#10-莉亚-leah) |
-| 11 | 玛鲁 | Maru | 夏季 10日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#11-玛鲁-maru) |
-| 12 | 潘妮 | Penny | 秋季 2日 | 是 | 婚恋候选人 | [五档偏好](./NPC礼物数据总览.md#12-潘妮-penny) |
+| 1 | 亚历克斯 | Alex | 夏季 13日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#01-亚历克斯-alex) · [日程](./NPC日程数据总览.md#npc-schedule-alex) |
+| 2 | 艾利欧特 | Elliott | 秋季 5日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#02-艾利欧特-elliott) · [日程](./NPC日程数据总览.md#npc-schedule-elliott) |
+| 3 | 哈维 | Harvey | 冬季 14日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#03-哈维-harvey) · [日程](./NPC日程数据总览.md#npc-schedule-harvey) |
+| 4 | 山姆 | Sam | 夏季 17日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#04-山姆-sam) · [日程](./NPC日程数据总览.md#npc-schedule-sam) |
+| 5 | 塞巴斯蒂安 | Sebastian | 冬季 10日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#05-塞巴斯蒂安-sebastian) · [日程](./NPC日程数据总览.md#npc-schedule-sebastian) |
+| 6 | 谢恩 | Shane | 春季 20日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#06-谢恩-shane) · [日程](./NPC日程数据总览.md#npc-schedule-shane) |
+| 7 | 阿比盖尔 | Abigail | 秋季 13日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#07-阿比盖尔-abigail) · [日程](./NPC日程数据总览.md#npc-schedule-abigail) |
+| 8 | 艾米丽 | Emily | 春季 27日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#08-艾米丽-emily) · [日程](./NPC日程数据总览.md#npc-schedule-emily) |
+| 9 | 海莉 | Haley | 春季 14日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#09-海莉-haley) · [日程](./NPC日程数据总览.md#npc-schedule-haley) |
+| 10 | 莉亚 | Leah | 冬季 23日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#10-莉亚-leah) · [日程](./NPC日程数据总览.md#npc-schedule-leah) |
+| 11 | 玛鲁 | Maru | 夏季 10日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#11-玛鲁-maru) · [日程](./NPC日程数据总览.md#npc-schedule-maru) |
+| 12 | 潘妮 | Penny | 秋季 2日 | 是 | 婚恋候选人 | [礼物](./NPC礼物数据总览.md#12-潘妮-penny) · [日程](./NPC日程数据总览.md#npc-schedule-penny) |
 
 ### 2.2 非婚恋可送礼居民（22/22）
 
-| # | 中文名 | 英文名 | 生日 | 送礼 | 关系类型 | 礼物数据 |
+| # | 中文名 | 英文名 | 生日 | 送礼 | 关系类型 | 详细数据 |
 |:--:|------|------|------|:--:|------|------|
-| 13 | 卡洛琳 | Caroline | 冬季 7日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#13-卡洛琳-caroline) |
-| 14 | 克林特 | Clint | 冬季 26日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#14-克林特-clint) |
-| 15 | 德米特里厄斯 | Demetrius | 夏季 19日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#15-德米特里厄斯-demetrius) |
-| 16 | 矮人 | Dwarf | 夏季 22日 | 是 | 特殊村民 | [五档偏好](./NPC礼物数据总览.md#16-矮人-dwarf) |
-| 17 | 艾芙琳 | Evelyn | 冬季 20日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#17-艾芙琳-evelyn) |
-| 18 | 乔治 | George | 秋季 24日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#18-乔治-george) |
-| 19 | 格斯 | Gus | 夏季 8日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#19-格斯-gus) |
-| 20 | 贾斯 | Jas | 夏季 4日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#20-贾斯-jas) |
-| 21 | 乔迪 | Jodi | 秋季 11日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#21-乔迪-jodi) |
-| 22 | 肯特 | Kent | 春季 4日 | 是 | 第 2 年回归村民 | [五档偏好](./NPC礼物数据总览.md#22-肯特-kent) |
-| 23 | 科罗布斯 | Krobus | 冬季 1日 | 是 | 可邀请室友 | [五档偏好](./NPC礼物数据总览.md#23-科罗布斯-krobus) |
-| 24 | 雷欧 | Leo | 夏季 26日 | 是 | 姜岛村民 | [五档偏好](./NPC礼物数据总览.md#24-雷欧-leo) |
-| 25 | 刘易斯 | Lewis | 春季 7日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#25-刘易斯-lewis) |
-| 26 | 莱纳斯 | Linus | 冬季 3日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#26-莱纳斯-linus) |
-| 27 | 玛妮 | Marnie | 秋季 18日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#27-玛妮-marnie) |
-| 28 | 潘姆 | Pam | 春季 18日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#28-潘姆-pam) |
-| 29 | 皮埃尔 | Pierre | 春季 26日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#29-皮埃尔-pierre) |
-| 30 | 罗宾 | Robin | 秋季 21日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#30-罗宾-robin) |
-| 31 | 桑迪 | Sandy | 秋季 15日 | 是 | 沙漠村民 | [五档偏好](./NPC礼物数据总览.md#31-桑迪-sandy) |
-| 32 | 文森特 | Vincent | 春季 10日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#32-文森特-vincent) |
-| 33 | 威利 | Willy | 夏季 24日 | 是 | 普通村民 | [五档偏好](./NPC礼物数据总览.md#33-威利-willy) |
-| 34 | 法师 | Wizard | 冬季 17日 | 是 | 特殊村民 | [五档偏好](./NPC礼物数据总览.md#34-法师-wizard) |
+| 13 | 卡洛琳 | Caroline | 冬季 7日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#13-卡洛琳-caroline) · [日程](./NPC日程数据总览.md#npc-schedule-caroline) |
+| 14 | 克林特 | Clint | 冬季 26日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#14-克林特-clint) · [日程](./NPC日程数据总览.md#npc-schedule-clint) |
+| 15 | 德米特里厄斯 | Demetrius | 夏季 19日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#15-德米特里厄斯-demetrius) · [日程](./NPC日程数据总览.md#npc-schedule-demetrius) |
+| 16 | 矮人 | Dwarf | 夏季 22日 | 是 | 特殊村民 | [礼物](./NPC礼物数据总览.md#16-矮人-dwarf) · [日程](./NPC日程数据总览.md#npc-schedule-dwarf) |
+| 17 | 艾芙琳 | Evelyn | 冬季 20日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#17-艾芙琳-evelyn) · [日程](./NPC日程数据总览.md#npc-schedule-evelyn) |
+| 18 | 乔治 | George | 秋季 24日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#18-乔治-george) · [日程](./NPC日程数据总览.md#npc-schedule-george) |
+| 19 | 格斯 | Gus | 夏季 8日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#19-格斯-gus) · [日程](./NPC日程数据总览.md#npc-schedule-gus) |
+| 20 | 贾斯 | Jas | 夏季 4日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#20-贾斯-jas) · [日程](./NPC日程数据总览.md#npc-schedule-jas) |
+| 21 | 乔迪 | Jodi | 秋季 11日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#21-乔迪-jodi) · [日程](./NPC日程数据总览.md#npc-schedule-jodi) |
+| 22 | 肯特 | Kent | 春季 4日 | 是 | 第 2 年回归村民 | [礼物](./NPC礼物数据总览.md#22-肯特-kent) · [日程](./NPC日程数据总览.md#npc-schedule-kent) |
+| 23 | 科罗布斯 | Krobus | 冬季 1日 | 是 | 可邀请室友 | [礼物](./NPC礼物数据总览.md#23-科罗布斯-krobus) · [日程](./NPC日程数据总览.md#npc-schedule-krobus) |
+| 24 | 雷欧 | Leo | 夏季 26日 | 是 | 姜岛村民 | [礼物](./NPC礼物数据总览.md#24-雷欧-leo) · [日程](./NPC日程数据总览.md#npc-schedule-leo) |
+| 25 | 刘易斯 | Lewis | 春季 7日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#25-刘易斯-lewis) · [日程](./NPC日程数据总览.md#npc-schedule-lewis) |
+| 26 | 莱纳斯 | Linus | 冬季 3日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#26-莱纳斯-linus) · [日程](./NPC日程数据总览.md#npc-schedule-linus) |
+| 27 | 玛妮 | Marnie | 秋季 18日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#27-玛妮-marnie) · [日程](./NPC日程数据总览.md#npc-schedule-marnie) |
+| 28 | 潘姆 | Pam | 春季 18日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#28-潘姆-pam) · [日程](./NPC日程数据总览.md#npc-schedule-pam) |
+| 29 | 皮埃尔 | Pierre | 春季 26日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#29-皮埃尔-pierre) · [日程](./NPC日程数据总览.md#npc-schedule-pierre) |
+| 30 | 罗宾 | Robin | 秋季 21日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#30-罗宾-robin) · [日程](./NPC日程数据总览.md#npc-schedule-robin) |
+| 31 | 桑迪 | Sandy | 秋季 15日 | 是 | 沙漠村民 | [礼物](./NPC礼物数据总览.md#31-桑迪-sandy) · [日程](./NPC日程数据总览.md#npc-schedule-sandy) |
+| 32 | 文森特 | Vincent | 春季 10日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#32-文森特-vincent) · [日程](./NPC日程数据总览.md#npc-schedule-vincent) |
+| 33 | 威利 | Willy | 夏季 24日 | 是 | 普通村民 | [礼物](./NPC礼物数据总览.md#33-威利-willy) · [日程](./NPC日程数据总览.md#npc-schedule-willy) |
+| 34 | 法师 | Wizard | 冬季 17日 | 是 | 特殊村民 | [礼物](./NPC礼物数据总览.md#34-法师-wizard) · [日程](./NPC日程数据总览.md#npc-schedule-wizard) |
 
 ## 三、不可送礼人物（12/12）
 
@@ -113,6 +113,7 @@
 - [英文 Stardew Valley Wiki — List of All Gifts](https://stardewvalleywiki.com/List_of_All_Gifts)
 - [英文 Stardew Valley Wiki — v1.6.15 NPCGiftTastes 原始数据](https://stardewvalleywiki.com/Modding:Gift_taste_data)
 - [英文 Stardew Valley Wiki — Friendship revision 193702](https://stardewvalleywiki.com/mediawiki/index.php?title=Friendship&oldid=193702)
+- [英文 Stardew Valley Wiki — 日程键优先级与字段](https://stardewvalleywiki.com/Modding:Schedule_data)
 
 ---
 

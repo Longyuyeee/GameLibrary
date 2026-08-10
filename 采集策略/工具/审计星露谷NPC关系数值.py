@@ -12,6 +12,7 @@ from urllib.parse import unquote
 REPO_ROOT = Path(__file__).resolve().parents[2]
 GAME_ROOT = REPO_ROOT / "牧场经营类" / "星露谷物语"
 RELATION_DOC = GAME_ROOT / "数值数据" / "NPC关系数值总览.md"
+SCHEDULE_DOC = GAME_ROOT / "数值数据" / "NPC日程数据总览.md"
 
 REQUIRED_RULE_FAMILIES = [
     "点数换算、显示与上限",
@@ -57,6 +58,7 @@ NAVIGATION_DOCS = [
     GAME_ROOT / "数值数据" / "NPC数据总览.md",
     GAME_ROOT / "数值数据" / "NPC礼物数据总览.md",
     RELATION_DOC,
+    SCHEDULE_DOC,
     GAME_ROOT / "机制分析" / "NPC社交系统.md",
     GAME_ROOT / "游戏概览.md",
 ]
@@ -91,7 +93,10 @@ def heading_slug(heading: str) -> str:
 
 def document_anchors(path: Path) -> set[str]:
     text = path.read_text(encoding="utf-8")
-    anchors: set[str] = set()
+    anchors = {
+        anchor.lower()
+        for anchor in re.findall(r'<[a-zA-Z][^>]*\sid=["\']([^"\']+)["\']', text)
+    }
     duplicates: dict[str, int] = {}
     for heading in re.findall(r"^#{1,6}\s+(.+?)\s*$", text, re.MULTILINE):
         base = heading_slug(heading)
@@ -162,13 +167,19 @@ def main() -> None:
     if broken_links:
         raise AssertionError(f"broken local links: {broken_links}")
 
-    required_cross_links = {
-        NAVIGATION_DOCS[0]: "./NPC关系数值总览.md",
-        NAVIGATION_DOCS[1]: "./NPC关系数值总览.md",
-        NAVIGATION_DOCS[3]: "../数值数据/NPC关系数值总览.md",
-        NAVIGATION_DOCS[4]: "./数值数据/NPC关系数值总览.md",
-    }
-    for document, target in required_cross_links.items():
+    required_cross_links = [
+        (NAVIGATION_DOCS[0], "./NPC关系数值总览.md"),
+        (NAVIGATION_DOCS[0], "./NPC日程数据总览.md"),
+        (NAVIGATION_DOCS[1], "./NPC关系数值总览.md"),
+        (RELATION_DOC, "./NPC日程数据总览.md"),
+        (SCHEDULE_DOC, "./NPC数据总览.md"),
+        (SCHEDULE_DOC, "./NPC关系数值总览.md"),
+        (NAVIGATION_DOCS[4], "../数值数据/NPC关系数值总览.md"),
+        (NAVIGATION_DOCS[4], "../数值数据/NPC日程数据总览.md"),
+        (NAVIGATION_DOCS[5], "./数值数据/NPC关系数值总览.md"),
+        (NAVIGATION_DOCS[5], "./数值数据/NPC日程数据总览.md"),
+    ]
+    for document, target in required_cross_links:
         text = document.read_text(encoding="utf-8")
         if target not in text:
             raise AssertionError(f"missing cross-link: {document.name} -> {target}")
