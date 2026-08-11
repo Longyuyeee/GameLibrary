@@ -71,8 +71,8 @@ NONDATA_BASELINE = {
     GAME / "机制分析" / "作物种植系统.md": (7, 6, "已完成"),
     GAME / "机制分析" / "剧情与故事系统.md": (18, 0, "已完成"),
     GAME / "机制分析" / "加工制造系统.md": (53, 14, "部分完成"),
-    GAME / "机制分析" / "地图场景系统.md": (72, 34, "已完成"),
-    GAME / "机制分析" / "战斗探索系统.md": (59, 11, "已完成"),
+    GAME / "机制分析" / "地图场景系统.md": (122, 35, "已完成"),
+    GAME / "机制分析" / "战斗探索系统.md": (148, 11, "已完成"),
     GAME / "机制分析" / "时间季节系统.md": (125, 7, "采集中"),
     GAME / "机制分析" / "畜牧养殖系统.md": (20, 2, "已完成"),
     GAME / "机制分析" / "经济系统.md": (243, 10, "采集中"),
@@ -292,7 +292,7 @@ def main() -> None:
         f"audit: game_docs={len(actual_game_docs)}/34, breadcrumbs={breadcrumb_count}/34, "
         f"child_docs={len(CHILDREN)}/33, continuous_nav={footer_count}/33, "
         "overview_order=33/33, legacy_duplicates=0, nondata_docs=16/16, "
-        f"nondata_rows={nondata_rows}/1888, external_urls={nondata_urls}/112, "
+        f"nondata_rows={nondata_rows}/2027, external_urls={nondata_urls}/113, "
         "nondata_status=11_complete+1_partial+4_collecting, "
         f"audited_docs={len(AUDITED_DOCS)}, local_links={local_links}, "
         f"anchors={anchor_links}, broken_links=0"

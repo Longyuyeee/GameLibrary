@@ -27,7 +27,7 @@ MAP_REVISIONS = {
     "The Desert": 192758,
     "Ginger Island": 193461,
     "Minecart": 176698,
-    "Boat": 191215,
+    "Fish Shop / Willy's Boat": 192522,
     "Animals / Horse": 193812,
     "Warp Totem / Obelisks": 192592,
     "Return Scepter": 193944,
@@ -118,6 +118,7 @@ def main() -> None:
             "PC v1.6.15",
             "机制规则族 | 预计 6 / 实际 6",
             "固定来源 | 预计 12 / 实际 12",
+            "地图数据完整性 | 农场类型 8/8、山顶农场采石场等级段 6/6、矿车站点 4/4、姜岛鹦鹉快递站点 5/5",
             "数值对象副本 | 0",
             "未知或待核实事实 | 0",
             "验收状态 | **已完成**",
@@ -134,6 +135,9 @@ def main() -> None:
             "[齐先生的挑战与姜岛](../特色文档/齐先生的挑战与姜岛.md)",
             "https://www.storyofseasons.com/fomt/",
             "https://runefactory.com/rf4/",
+            "| 草原农场 | 耕种 | 2,066 |",
+            "| 10+ | 45.77 | 15 | 1.70 |",
+            "| 鹦鹉快递站点 | 火山、农场、挖掘场、丛林、码头，共 5/5",
         ],
         "地图场景系统",
     )
@@ -143,6 +147,7 @@ def main() -> None:
             "PC v1.6.15",
             "机制规则族 | 预计 5 / 实际 5",
             "固定来源 | 预计 4 / 实际 4",
+            "地下城数据完整性 | 矿井楼层段 12/12、奖励层 12/12、骷髅洞穴挑战 3/3、火山普通宝箱 9/9、稀有宝箱 11/11",
             "数值对象副本 | 0",
             "未知或待核实事实 | 0",
             "验收状态 | **已完成**",
@@ -160,6 +165,10 @@ def main() -> None:
             "[齐先生的挑战与姜岛](../特色文档/齐先生的挑战与姜岛.md)",
             "https://www.storyofseasons.com/fomt/",
             "https://runefactory.com/rf4/",
+            "| 111–119 | 熔岩、绯红土 |",
+            "| 120 | 骷髅钥匙 | 骷髅钥匙 |",
+            "| 骷髅洞穴入侵 | 时限内到达 100 层 |",
+            "| 龙牙小刀 | 1 | 1/27 |",
         ],
         "战斗探索系统",
     )
@@ -247,10 +256,10 @@ def main() -> None:
 
     map_rows, map_urls = table_rows_and_urls(MAP)
     combat_rows, combat_urls = table_rows_and_urls(COMBAT)
-    if (map_rows, map_urls) != (72, 34):
-        raise AssertionError(f"地图文档证据漂移：{(map_rows, map_urls)}/(72, 34)")
-    if (combat_rows, combat_urls) != (59, 11):
-        raise AssertionError(f"战斗文档证据漂移：{(combat_rows, combat_urls)}/(59, 11)")
+    if (map_rows, map_urls) != (122, 35):
+        raise AssertionError(f"地图文档证据漂移：{(map_rows, map_urls)}/(122, 35)")
+    if (combat_rows, combat_urls) != (148, 11):
+        raise AssertionError(f"战斗文档证据漂移：{(combat_rows, combat_urls)}/(148, 11)")
     print(
         "audit: map_rules=6/6, map_revisions=12/12, "
         "combat_rules=5/5, combat_revisions=4/4, data_duplicates=0, "
