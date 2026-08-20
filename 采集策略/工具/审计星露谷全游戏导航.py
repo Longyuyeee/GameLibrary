@@ -73,9 +73,9 @@ NONDATA_BASELINE = {
     GAME / "机制分析" / "加工制造系统.md": (53, 14, "部分完成"),
     GAME / "机制分析" / "地图场景系统.md": (122, 35, "已完成"),
     GAME / "机制分析" / "战斗探索系统.md": (148, 11, "已完成"),
-    GAME / "机制分析" / "时间季节系统.md": (125, 7, "采集中"),
+    GAME / "机制分析" / "时间季节系统.md": (104, 6, "已完成"),
     GAME / "机制分析" / "畜牧养殖系统.md": (20, 2, "已完成"),
-    GAME / "机制分析" / "经济系统.md": (243, 10, "采集中"),
+    GAME / "机制分析" / "经济系统.md": (146, 10, "已完成"),
     GAME / "机制分析" / "道具升级系统.md": (19, 0, "已完成"),
     GAME / "特色文档" / "团队与开发历程.md": (60, 4, "采集中"),
     GAME / "特色文档" / "角色弧线深度解析.md": (15, 0, "已完成"),
@@ -260,10 +260,10 @@ def main() -> None:
         status_counts[status] += 1
         nondata_rows += actual_rows
         nondata_urls += actual_urls
-    expected_status_summary = "非数值文档 16 份中，11 份已完成、1 份部分完成、4 份采集中"
+    expected_status_summary = "非数值文档 16 份中，13 份已完成、1 份部分完成、2 份采集中"
     if expected_status_summary not in audit:
         errors.append(f"审计记录缺少：{expected_status_summary}")
-    if status_counts != {"已完成": 11, "部分完成": 1, "采集中": 4}:
+    if status_counts != {"已完成": 13, "部分完成": 1, "采集中": 2}:
         errors.append(f"非数值文档状态基线漂移：{status_counts}")
 
     plan = PLAN.read_text(encoding="utf-8")
@@ -292,8 +292,8 @@ def main() -> None:
         f"audit: game_docs={len(actual_game_docs)}/34, breadcrumbs={breadcrumb_count}/34, "
         f"child_docs={len(CHILDREN)}/33, continuous_nav={footer_count}/33, "
         "overview_order=33/33, legacy_duplicates=0, nondata_docs=16/16, "
-        f"nondata_rows={nondata_rows}/2027, external_urls={nondata_urls}/113, "
-        "nondata_status=11_complete+1_partial+4_collecting, "
+        f"nondata_rows={nondata_rows}/1909, external_urls={nondata_urls}/112, "
+        "nondata_status=13_complete+1_partial+2_collecting, "
         f"audited_docs={len(AUDITED_DOCS)}, local_links={local_links}, "
         f"anchors={anchor_links}, broken_links=0"
     )
