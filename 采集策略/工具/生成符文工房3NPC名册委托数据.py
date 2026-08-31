@@ -182,7 +182,7 @@ def render_roster(groups: dict[str, list[tuple[str, str]]]) -> str:
             "",
             "---",
             "",
-            "[上一篇：NPC数据总览](./NPC数据总览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：委托任务数据总览](./委托任务数据总览.md)",
+            "[上一篇：NPC数据总览](./NPC数据总览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：NPC礼物数据总览](./NPC礼物数据总览.md)",
             "",
         ]
     )
@@ -257,7 +257,7 @@ def render_requests(entries: list[tuple[int, str, str]], bachelorettes: list[str
             "",
             "---",
             "",
-            "[上一篇：NPC名册数据总览](./NPC名册数据总览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：作物数据总览](./作物数据总览.md)",
+            "[上一篇：NPC礼物数据总览](./NPC礼物数据总览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：作物数据总览](./作物数据总览.md)",
             "",
         ]
     )

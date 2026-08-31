@@ -40,6 +40,7 @@ CHILDREN = [
     ChildDocument("道具升级系统", GAME / "机制分析" / "道具升级系统.md"),
     ChildDocument("NPC数据总览", GAME / "数值数据" / "NPC数据总览.md"),
     ChildDocument("NPC名册数据总览", GAME / "数值数据" / "NPC名册数据总览.md"),
+    ChildDocument("NPC礼物数据总览", GAME / "数值数据" / "NPC礼物数据总览.md"),
     ChildDocument("委托任务数据总览", GAME / "数值数据" / "委托任务数据总览.md"),
     ChildDocument("作物数据总览", GAME / "数值数据" / "作物数据总览.md"),
     ChildDocument("加工配方数据总览", GAME / "数值数据" / "加工配方数据总览.md"),
@@ -111,13 +112,11 @@ def check_local_links(path: Path) -> tuple[int, int, list[str]]:
     checked_anchors = 0
     broken: list[str] = []
     for _, target in markdown_links(path.read_text(encoding="utf-8")):
-        if target.startswith(("http://", "https://", "#")):
+        if target.startswith(("http://", "https://")):
             continue
         relative_target, _, fragment = target.partition("#")
-        if not relative_target:
-            continue
         checked += 1
-        resolved = (path.parent / unquote(relative_target)).resolve()
+        resolved = path if not relative_target else (path.parent / unquote(relative_target)).resolve()
         if not resolved.exists():
             broken.append(f"{path.relative_to(ROOT)} -> {target}")
             continue
@@ -192,10 +191,10 @@ def main() -> None:
     expected_targets = [markdown_target(OVERVIEW, child.path) for child in CHILDREN]
     if overview_targets != expected_targets:
         errors.append(
-            f"概览顺序或覆盖不符：actual={len(overview_targets)}/26, expected=26/26"
+            f"概览顺序或覆盖不符：actual={len(overview_targets)}/27, expected=27/27"
         )
-    if "内容文档数: 26 份" not in overview or "v2.9 状态: **采集中**" not in overview:
-        errors.append("概览未声明实际 26 份内容文档及 v2.9 采集中状态")
+    if "内容文档数: 27 份" not in overview or "v2.9 状态: **采集中**" not in overview:
+        errors.append("概览未声明实际 27 份内容文档及 v2.9 采集中状态")
 
     overview_first = next(line for line in overview.splitlines() if line.strip())
     expected_overview_first = (
@@ -243,11 +242,11 @@ def main() -> None:
         audit = AUDIT.read_text(encoding="utf-8")
     for value in (
         "当前状态：**采集中**",
-        "数据文档完成状态 | 2/11",
-        "数据覆盖声明 | 3/11",
+        "数据文档完成状态 | 3/12",
+        "数据覆盖声明 | 4/12",
         "驯养与产出怪物",
         "普通敌人、Boss、属性、掉落和区域名册",
-        "下一阶段进入 NPC 礼物数据",
+        "下一阶段进入 NPC 日程数据",
     ):
         if value not in audit:
             errors.append(f"审计记录缺少：{value}")
@@ -257,10 +256,10 @@ def main() -> None:
         if value not in plan:
             errors.append(f"全库计划缺少：{value}")
     readme = README.read_text(encoding="utf-8")
-    if "[符文工房3](./牧场经营类/符文工房3/游戏概览.md)" not in readme or "| 26 |" not in next(
+    if "[符文工房3](./牧场经营类/符文工房3/游戏概览.md)" not in readme or "| 27 |" not in next(
         line for line in readme.splitlines() if "[符文工房3]" in line
     ):
-        errors.append("README 未同步符文工房3实际 26 份内容文档")
+        errors.append("README 未同步符文工房3实际 27 份内容文档")
 
     audited_docs = sorted(GAME.rglob("*.md")) + [PLAN]
     if AUDIT.exists():
@@ -277,10 +276,10 @@ def main() -> None:
         errors.append(f"本地链接或锚点失效：{broken}")
 
     print(
-        f"BASELINE game_docs={len(actual_game_docs)}/27, children={len(CHILDREN)}/26, "
-        f"overview_links={len(overview_targets)}/26, breadcrumbs={breadcrumb_count}/27, "
-        f"continuous_nav={footer_count}/26, coverage_declarations={coverage_declarations}/11, "
-        f"unresolved_data_docs={unresolved_docs}/11, local_links={local_links}, "
+        f"BASELINE game_docs={len(actual_game_docs)}/28, children={len(CHILDREN)}/27, "
+        f"overview_links={len(overview_targets)}/27, breadcrumbs={breadcrumb_count}/28, "
+        f"continuous_nav={footer_count}/27, coverage_declarations={coverage_declarations}/12, "
+        f"unresolved_data_docs={unresolved_docs}/12, local_links={local_links}, "
         f"anchors={anchor_links}, broken_links={len(broken)}"
     )
     if errors:

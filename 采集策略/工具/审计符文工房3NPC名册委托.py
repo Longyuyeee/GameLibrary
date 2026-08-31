@@ -233,10 +233,10 @@ def main() -> None:
         ],
         "机制归属",
     )
-    assert_contains(hub, ["NPC 子域完成状态 | 2/5", "礼物 | 采集中", "日程 | 采集中", "角色事件 | 采集中"], "NPC 数据中心")
-    assert_contains(overview, ["内容文档数: 26 份", "数值数据 | 11 篇", "NPC名册数据总览", "委托任务数据总览"], "游戏概览")
-    assert_contains(audit, ["数据文档完成状态 | 2/11", "NPC 子域 | 2/5", "角色注册表 29/29", "委托注册表 294/294", "下一阶段进入 NPC 礼物数据"], "审计记录")
-    assert_contains(plan, ["数据文档完成状态为 2/11", "下一阶段处理符文工房3的 NPC 礼物数据"], "全库计划")
+    assert_contains(hub, ["NPC 子域完成状态 | 3/5", "礼物 | 已完成", "日程 | 采集中", "角色事件 | 采集中"], "NPC 数据中心")
+    assert_contains(overview, ["内容文档数: 27 份", "数值数据 | 12 篇", "NPC名册数据总览", "NPC礼物数据总览", "委托任务数据总览"], "游戏概览")
+    assert_contains(audit, ["数据文档完成状态 | 3/12", "NPC 子域 | 3/5", "角色注册表 29/29", "委托注册表 294/294", "下一阶段进入 NPC 日程数据"], "审计记录")
+    assert_contains(plan, ["数据文档完成状态为 3/12", "下一阶段处理符文工房3的 NPC 日程数据"], "全库计划")
 
     print(
         "audit: roster=29/29, roster_anchors=29/29, requests=294/294, "
