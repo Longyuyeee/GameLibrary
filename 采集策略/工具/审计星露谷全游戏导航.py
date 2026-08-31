@@ -81,7 +81,7 @@ NONDATA_BASELINE = {
     GAME / "特色文档" / "角色弧线深度解析.md": (15, 0, "已完成"),
     GAME / "特色文档" / "爷爷评价与完美追踪.md": (129, 5, "已完成"),
     GAME / "特色文档" / "社区中心与Joja路线.md": (725, 5, "已完成"),
-    GAME / "特色文档" / "齐先生的挑战与姜岛.md": (317, 9, "采集中"),
+    GAME / "特色文档" / "齐先生的挑战与姜岛.md": (256, 9, "已完成"),
 }
 
 
@@ -260,10 +260,10 @@ def main() -> None:
         status_counts[status] += 1
         nondata_rows += actual_rows
         nondata_urls += actual_urls
-    expected_status_summary = "非数值文档 16 份中，13 份已完成、1 份部分完成、2 份采集中"
+    expected_status_summary = "非数值文档 16 份中，14 份已完成、1 份部分完成、1 份采集中"
     if expected_status_summary not in audit:
         errors.append(f"审计记录缺少：{expected_status_summary}")
-    if status_counts != {"已完成": 13, "部分完成": 1, "采集中": 2}:
+    if status_counts != {"已完成": 14, "部分完成": 1, "采集中": 1}:
         errors.append(f"非数值文档状态基线漂移：{status_counts}")
 
     plan = PLAN.read_text(encoding="utf-8")
@@ -292,8 +292,8 @@ def main() -> None:
         f"audit: game_docs={len(actual_game_docs)}/34, breadcrumbs={breadcrumb_count}/34, "
         f"child_docs={len(CHILDREN)}/33, continuous_nav={footer_count}/33, "
         "overview_order=33/33, legacy_duplicates=0, nondata_docs=16/16, "
-        f"nondata_rows={nondata_rows}/1909, external_urls={nondata_urls}/112, "
-        "nondata_status=13_complete+1_partial+2_collecting, "
+        f"nondata_rows={nondata_rows}/1848, external_urls={nondata_urls}/112, "
+        "nondata_status=14_complete+1_partial+1_collecting, "
         f"audited_docs={len(AUDITED_DOCS)}, local_links={local_links}, "
         f"anchors={anchor_links}, broken_links=0"
     )
