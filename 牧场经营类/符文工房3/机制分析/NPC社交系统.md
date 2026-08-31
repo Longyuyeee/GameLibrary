@@ -1,3 +1,5 @@
+[项目首页](../../../README.md) > [牧场经营类](../../_index.md) > [符文工房3概览](../游戏概览.md) > NPC社交系统
+
 # NPC与社交系统 - 符文工房3 豪华版
 ![RF3 候补](https://manuals.marvelousgames.com/rf3sp/14/img/top.jpg)
 
@@ -199,3 +201,7 @@
 - IGN: Rune Factory 3 Courtship and Marriage Guide
 - [Rune Factory 3 Special Web Manual - Romance & Marriage](https://manuals.marvelousgames.com/rf3sp/14/)
 - Steam社区指南: 符文工房3人物喜好攻略
+
+---
+
+[上一篇：游戏概览](../游戏概览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：作物种植系统](./作物种植系统.md)

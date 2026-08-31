@@ -1,3 +1,5 @@
+[项目首页](../../../README.md) > [牧场经营类](../../_index.md) > [符文工房3概览](../游戏概览.md) > NPC数据总览
+
 # NPC数据总览 - 符文工房3 豪华版
 ![RF3 候补](https://manuals.marvelousgames.com/rf3sp/14/img/top.jpg)
 
@@ -90,3 +92,7 @@
 - Siliconera: Rune Factory 3 Special 恋爱指南
 - IGN: Rune Factory 3 结婚与角色指南
 - Steam 社区指南: 符文工房3人物喜好攻略
+
+---
+
+[上一篇：道具升级系统](../机制分析/道具升级系统.md) · [返回游戏概览](../游戏概览.md) · [下一篇：作物数据总览](./作物数据总览.md)
