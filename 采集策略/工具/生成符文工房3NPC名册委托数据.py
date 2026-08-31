@@ -257,7 +257,7 @@ def render_requests(entries: list[tuple[int, str, str]], bachelorettes: list[str
             "",
             "---",
             "",
-            "[上一篇：NPC礼物数据总览](./NPC礼物数据总览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：作物数据总览](./作物数据总览.md)",
+            "[上一篇：NPC日程数据总览](./NPC日程数据总览.md) · [返回游戏概览](../游戏概览.md) · [下一篇：作物数据总览](./作物数据总览.md)",
             "",
         ]
     )

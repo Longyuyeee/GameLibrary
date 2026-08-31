@@ -41,6 +41,7 @@ CHILDREN = [
     ChildDocument("NPC数据总览", GAME / "数值数据" / "NPC数据总览.md"),
     ChildDocument("NPC名册数据总览", GAME / "数值数据" / "NPC名册数据总览.md"),
     ChildDocument("NPC礼物数据总览", GAME / "数值数据" / "NPC礼物数据总览.md"),
+    ChildDocument("NPC日程数据总览", GAME / "数值数据" / "NPC日程数据总览.md"),
     ChildDocument("委托任务数据总览", GAME / "数值数据" / "委托任务数据总览.md"),
     ChildDocument("作物数据总览", GAME / "数值数据" / "作物数据总览.md"),
     ChildDocument("加工配方数据总览", GAME / "数值数据" / "加工配方数据总览.md"),
@@ -191,10 +192,10 @@ def main() -> None:
     expected_targets = [markdown_target(OVERVIEW, child.path) for child in CHILDREN]
     if overview_targets != expected_targets:
         errors.append(
-            f"概览顺序或覆盖不符：actual={len(overview_targets)}/27, expected=27/27"
+            f"概览顺序或覆盖不符：actual={len(overview_targets)}/28, expected=28/28"
         )
-    if "内容文档数: 27 份" not in overview or "v2.9 状态: **采集中**" not in overview:
-        errors.append("概览未声明实际 27 份内容文档及 v2.9 采集中状态")
+    if "内容文档数: 28 份" not in overview or "v2.9 状态: **采集中**" not in overview:
+        errors.append("概览未声明实际 28 份内容文档及 v2.9 采集中状态")
 
     overview_first = next(line for line in overview.splitlines() if line.strip())
     expected_overview_first = (
@@ -242,24 +243,24 @@ def main() -> None:
         audit = AUDIT.read_text(encoding="utf-8")
     for value in (
         "当前状态：**采集中**",
-        "数据文档完成状态 | 3/12",
-        "数据覆盖声明 | 4/12",
+        "数据文档完成状态 | 3/13",
+        "数据覆盖声明 | 5/13",
         "驯养与产出怪物",
         "普通敌人、Boss、属性、掉落和区域名册",
-        "下一阶段进入 NPC 日程数据",
+        "下一阶段继续 NPC 日程数据",
     ):
         if value not in audit:
             errors.append(f"审计记录缺少：{value}")
 
     plan = PLAN.read_text(encoding="utf-8")
-    for value in ("符文工房3", "文件、版本、来源、归属与连续导航基线"):
+    for value in ("符文工房3", "已闭合 28 份内容文档", "下一阶段继续 NPC 日程"):
         if value not in plan:
             errors.append(f"全库计划缺少：{value}")
     readme = README.read_text(encoding="utf-8")
-    if "[符文工房3](./牧场经营类/符文工房3/游戏概览.md)" not in readme or "| 27 |" not in next(
+    if "[符文工房3](./牧场经营类/符文工房3/游戏概览.md)" not in readme or "| 28 |" not in next(
         line for line in readme.splitlines() if "[符文工房3]" in line
     ):
-        errors.append("README 未同步符文工房3实际 27 份内容文档")
+        errors.append("README 未同步符文工房3实际 28 份内容文档")
 
     audited_docs = sorted(GAME.rglob("*.md")) + [PLAN]
     if AUDIT.exists():
@@ -276,10 +277,10 @@ def main() -> None:
         errors.append(f"本地链接或锚点失效：{broken}")
 
     print(
-        f"BASELINE game_docs={len(actual_game_docs)}/28, children={len(CHILDREN)}/27, "
-        f"overview_links={len(overview_targets)}/27, breadcrumbs={breadcrumb_count}/28, "
-        f"continuous_nav={footer_count}/27, coverage_declarations={coverage_declarations}/12, "
-        f"unresolved_data_docs={unresolved_docs}/12, local_links={local_links}, "
+        f"BASELINE game_docs={len(actual_game_docs)}/29, children={len(CHILDREN)}/28, "
+        f"overview_links={len(overview_targets)}/28, breadcrumbs={breadcrumb_count}/29, "
+        f"continuous_nav={footer_count}/28, coverage_declarations={coverage_declarations}/13, "
+        f"unresolved_data_docs={unresolved_docs}/13, local_links={local_links}, "
         f"anchors={anchor_links}, broken_links={len(broken)}"
     )
     if errors:
