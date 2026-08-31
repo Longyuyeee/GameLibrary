@@ -77,7 +77,15 @@ FORBIDDEN_STALE_TEXT = [
     "常用作物加工对比",
     "高价值鱼加工收益",
     "建筑材料总表(罗宾建造)",
+    "传统《牧场物语》作品通常",
+    "前者让几乎所有成长线",
+    "复杂度主要来自原料季节性",
+    "错误投资可能长期卡住流程",
+    "失败惩罚更柔和",
+    "兼顾休闲与深度的关键",
 ]
+
+COMPARISON_REVISIONS = [104978, 84923, 87198, 27738, 26976]
 
 
 def markdown_links(text: str) -> list[tuple[str, str]]:
@@ -216,11 +224,40 @@ def main() -> None:
             "[加工机器 30/30](../数值数据/加工配方数据总览.md)",
             "[烹饪配方 81/81](../数值数据/烹饪配方数据总览.md)",
             "[制作配方 150/150](../数值数据/制作配方数据总览.md)",
-            "与《牧场物语》系列对比",
-            "与《波西亚时光》对比",
+            "Story of Seasons: Friends of Mineral Town",
+            "My Time at Portia",
+            "Graveyard Keeper",
+            "比较对象 | 预计 4 / 实际 4",
+            "比较维度 | 预计 5 / 实际 5",
+            "比较固定来源 | 预计 5 / 实际 5",
+            "Maker 委托槽位 5/5",
+            "技术点类型 3/3",
+            "技术分支 8/8",
+            "Central Power Supply（中央供能）",
+            "同区域库存读取",
         ],
         "mechanism alignment",
     )
+    missing_comparison_revisions = [
+        revision
+        for revision in COMPARISON_REVISIONS
+        if f"oldid={revision}" not in mechanism
+    ]
+    if missing_comparison_revisions:
+        raise AssertionError(
+            f"comparison fixed revisions missing: {missing_comparison_revisions}"
+        )
+    matrix = mechanism.split("### 8.3 五维比较矩阵 4×5", 1)[1].split(
+        "## 9. 来源与审计说明", 1
+    )[0]
+    matrix_rows = sum(
+        line.startswith("| ")
+        and not line.startswith("|---")
+        and not line.startswith("| 对象")
+        for line in matrix.splitlines()
+    )
+    if matrix_rows != 4:
+        raise AssertionError(f"comparison matrix rows mismatch: {matrix_rows}/4")
     assert_contains(
         overview,
         [
@@ -272,6 +309,8 @@ def main() -> None:
         f"fixed_revisions={len(MASTER_REVISIONS) + len(MACHINE_REVISIONS)}/"
         f"{len(MASTER_REVISIONS) + len(MACHINE_REVISIONS)}, "
         f"audited_docs={len(AUDITED_DOCS)}, local_links={local_links}, "
+        f"comparison_objects=4/4, comparison_dimensions=5/5, "
+        f"comparison_revisions={len(COMPARISON_REVISIONS)}/{len(COMPARISON_REVISIONS)}, "
         f"anchors={anchor_links}, broken_links=0, stale_claims=0, unresolved=0"
     )
 

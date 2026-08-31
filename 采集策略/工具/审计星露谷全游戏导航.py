@@ -70,7 +70,7 @@ NONDATA_BASELINE = {
     GAME / "机制分析" / "NPC社交系统.md": (7, 5, "已完成"),
     GAME / "机制分析" / "作物种植系统.md": (7, 6, "已完成"),
     GAME / "机制分析" / "剧情与故事系统.md": (19, 0, "已完成"),
-    GAME / "机制分析" / "加工制造系统.md": (53, 14, "部分完成"),
+    GAME / "机制分析" / "加工制造系统.md": (80, 19, "已完成"),
     GAME / "机制分析" / "地图场景系统.md": (122, 35, "已完成"),
     GAME / "机制分析" / "战斗探索系统.md": (148, 11, "已完成"),
     GAME / "机制分析" / "时间季节系统.md": (104, 6, "已完成"),
@@ -260,16 +260,16 @@ def main() -> None:
         status_counts[status] += 1
         nondata_rows += actual_rows
         nondata_urls += actual_urls
-    expected_status_summary = "非数值文档 16 份中，15 份已完成、1 份部分完成、0 份采集中"
+    expected_status_summary = "非数值文档 16 份中，16 份已完成、0 份部分完成、0 份采集中"
     if expected_status_summary not in audit:
         errors.append(f"审计记录缺少：{expected_status_summary}")
-    if status_counts != {"已完成": 15, "部分完成": 1, "采集中": 0}:
+    if status_counts != {"已完成": 16, "部分完成": 0, "采集中": 0}:
         errors.append(f"非数值文档状态基线漂移：{status_counts}")
 
     plan = PLAN.read_text(encoding="utf-8")
     for value in (
-        "全游戏导航链已完成",
-        "下一阶段为剩余非数值文档逐域重建",
+        "34/34 面包屑、33/33 连续导航与全量专项审计通过",
+        "下一阶段处理符文工房3",
     ):
         if value not in plan:
             errors.append(f"执行计划缺少：{value}")
@@ -292,8 +292,8 @@ def main() -> None:
         f"audit: game_docs={len(actual_game_docs)}/34, breadcrumbs={breadcrumb_count}/34, "
         f"child_docs={len(CHILDREN)}/33, continuous_nav={footer_count}/33, "
         "overview_order=33/33, legacy_duplicates=0, nondata_docs=16/16, "
-        f"nondata_rows={nondata_rows}/1897, external_urls={nondata_urls}/118, "
-        "nondata_status=15_complete+1_partial+0_collecting, "
+        f"nondata_rows={nondata_rows}/1924, external_urls={nondata_urls}/123, "
+        "nondata_status=16_complete+0_partial+0_collecting, "
         f"audited_docs={len(AUDITED_DOCS)}, local_links={local_links}, "
         f"anchors={anchor_links}, broken_links=0"
     )
