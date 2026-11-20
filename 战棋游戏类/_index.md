@@ -21,6 +21,8 @@
 
 ## 采集进度
 
+下表沿用历史归档口径；P1 专题首版见下方，不计入此表的「完成」。
+
 | 层级 | 款数 | 完成 | 进度 |
 |:--:|:--:|:--:|:--:|
 | P0 | 6 | 6 | 100% |
@@ -41,8 +43,8 @@
 | XCOM 2: War of the Chosen | 资源生存型 | **10份** ✅ |
 | 火焰纹章 Engage | 角色养成驱动 | **17份** ✅ |
 
-### P1（10款）— 9 款首版 / 1 款待采集
-[觉醒（首版）](./首版设定集/01-Fire-Emblem-Awakening.md) / [圣战之系谱（首版）](./首版设定集/02-Fire-Emblem-Genealogy.md) / [魔界战记 5（首版）](./首版设定集/03-Disgaea-5-Complete.md) / [机战 V（首版）](./首版设定集/04-Super-Robot-Wars-V.md) / [旗帜传说（首版）](./首版设定集/05-The-Banner-Saga.md) / [战场女武神 4（首版）](./首版设定集/06-Valkyria-Chronicles-4.md) / [三角战略（首版）](./首版设定集/07-Triangle-Strategy.md) / [if／Fates（首版）](./首版设定集/08-Fire-Emblem-Fates.md) / [烈火之剑（首版）](./首版设定集/09-Fire-Emblem-Blazing-Blade.md) / 梦幻模拟战I&II
+### P1（10款）— 10 款已有首版
+[觉醒（首版）](./首版设定集/01-Fire-Emblem-Awakening.md) / [圣战之系谱（首版）](./首版设定集/02-Fire-Emblem-Genealogy.md) / [魔界战记 5（首版）](./首版设定集/03-Disgaea-5-Complete.md) / [机战 V（首版）](./首版设定集/04-Super-Robot-Wars-V.md) / [旗帜传说（首版）](./首版设定集/05-The-Banner-Saga.md) / [战场女武神 4（首版）](./首版设定集/06-Valkyria-Chronicles-4.md) / [三角战略（首版）](./首版设定集/07-Triangle-Strategy.md) / [if／Fates（首版）](./首版设定集/08-Fire-Emblem-Fates.md) / [烈火之剑（首版）](./首版设定集/09-Fire-Emblem-Blazing-Blade.md) / [梦幻模拟战 I & II（首版）](./首版设定集/10-Langrisser-I-II.md)
 
 ### P2（14款）— 待采集
 暗黑龙 / 纹章之谜 / 775 / 封印 / 圣魔 / 苍炎 / 晓女 / 回声 / 高级战争 / 前线任务1st / FFTA2 / Fell Seal / P5T / 韦诺之战
