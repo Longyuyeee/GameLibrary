@@ -2,7 +2,7 @@
 
 > 品类策略: [战棋游戏类采集策略](../采集策略/战棋游戏类采集策略.md) v1.0 | 2026-06-23
 
-> 补充入口：[首版设定集（6 款）](./首版设定集/README.md)，与 6 款历史归档分列，不计为全量验收。
+> 补充入口：[首版设定集（7 款）](./首版设定集/README.md)，与 6 款历史归档分列，不计为全量验收。
 
 ## 品类简介
 
@@ -41,8 +41,8 @@
 | XCOM 2: War of the Chosen | 资源生存型 | **10份** ✅ |
 | 火焰纹章 Engage | 角色养成驱动 | **17份** ✅ |
 
-### P1（10款）— 6 款首版 / 4 款待采集
-[觉醒（首版）](./首版设定集/01-Fire-Emblem-Awakening.md) / [圣战之系谱（首版）](./首版设定集/02-Fire-Emblem-Genealogy.md) / [魔界战记 5（首版）](./首版设定集/03-Disgaea-5-Complete.md) / [机战 V（首版）](./首版设定集/04-Super-Robot-Wars-V.md) / [旗帜传说（首版）](./首版设定集/05-The-Banner-Saga.md) / [战场女武神 4（首版）](./首版设定集/06-Valkyria-Chronicles-4.md) / 三角战略 / if / 烈火之剑 / 梦幻模拟战I&II
+### P1（10款）— 7 款首版 / 3 款待采集
+[觉醒（首版）](./首版设定集/01-Fire-Emblem-Awakening.md) / [圣战之系谱（首版）](./首版设定集/02-Fire-Emblem-Genealogy.md) / [魔界战记 5（首版）](./首版设定集/03-Disgaea-5-Complete.md) / [机战 V（首版）](./首版设定集/04-Super-Robot-Wars-V.md) / [旗帜传说（首版）](./首版设定集/05-The-Banner-Saga.md) / [战场女武神 4（首版）](./首版设定集/06-Valkyria-Chronicles-4.md) / [三角战略（首版）](./首版设定集/07-Triangle-Strategy.md) / if / 烈火之剑 / 梦幻模拟战I&II
 
 ### P2（14款）— 待采集
 暗黑龙 / 纹章之谜 / 775 / 封印 / 圣魔 / 苍炎 / 晓女 / 回声 / 高级战争 / 前线任务1st / FFTA2 / Fell Seal / P5T / 韦诺之战
