@@ -2,7 +2,7 @@
 
 > 品类策略: [战棋游戏类采集策略](../采集策略/战棋游戏类采集策略.md) v1.0 | 2026-06-23
 
-> 补充入口：[首版设定集（17 款）](./首版设定集/README.md)，与 6 款历史归档分列，不计为全量验收。
+> 补充入口：[首版设定集（18 款）](./首版设定集/README.md)，与 6 款历史归档分列，不计为全量验收。
 
 ## 品类简介
 
@@ -46,8 +46,8 @@
 ### P1（10款）— 10 款已有首版
 [觉醒（首版）](./首版设定集/01-Fire-Emblem-Awakening.md) / [圣战之系谱（首版）](./首版设定集/02-Fire-Emblem-Genealogy.md) / [魔界战记 5（首版）](./首版设定集/03-Disgaea-5-Complete.md) / [机战 V（首版）](./首版设定集/04-Super-Robot-Wars-V.md) / [旗帜传说（首版）](./首版设定集/05-The-Banner-Saga.md) / [战场女武神 4（首版）](./首版设定集/06-Valkyria-Chronicles-4.md) / [三角战略（首版）](./首版设定集/07-Triangle-Strategy.md) / [if／Fates（首版）](./首版设定集/08-Fire-Emblem-Fates.md) / [烈火之剑（首版）](./首版设定集/09-Fire-Emblem-Blazing-Blade.md) / [梦幻模拟战 I & II（首版）](./首版设定集/10-Langrisser-I-II.md)
 
-### P2（14款）— 7 款首版 / 7 款待采集
-[暗黑龙（FC 首版）](./首版设定集/11-Fire-Emblem-Shadow-Dragon-Blade-of-Light.md) / [纹章之谜（SFC 首版）](./首版设定集/12-Fire-Emblem-Mystery-of-the-Emblem.md) / [多拉基亚 776（首版）](./首版设定集/13-Fire-Emblem-Thracia-776.md) / [封印之剑（首版）](./首版设定集/14-Fire-Emblem-Binding-Blade.md) / [圣魔之光石（首版）](./首版设定集/15-Fire-Emblem-Sacred-Stones.md) / [苍炎之轨迹（首版）](./首版设定集/16-Fire-Emblem-Path-of-Radiance.md) / [晓之女神（首版）](./首版设定集/17-Fire-Emblem-Radiant-Dawn.md) / 回声 / 高级战争 / 前线任务1st / FFTA2 / Fell Seal / P5T / 韦诺之战
+### P2（14款）— 8 款首版 / 6 款待采集
+[暗黑龙（FC 首版）](./首版设定集/11-Fire-Emblem-Shadow-Dragon-Blade-of-Light.md) / [纹章之谜（SFC 首版）](./首版设定集/12-Fire-Emblem-Mystery-of-the-Emblem.md) / [多拉基亚 776（首版）](./首版设定集/13-Fire-Emblem-Thracia-776.md) / [封印之剑（首版）](./首版设定集/14-Fire-Emblem-Binding-Blade.md) / [圣魔之光石（首版）](./首版设定集/15-Fire-Emblem-Sacred-Stones.md) / [苍炎之轨迹（首版）](./首版设定集/16-Fire-Emblem-Path-of-Radiance.md) / [晓之女神（首版）](./首版设定集/17-Fire-Emblem-Radiant-Dawn.md) / [回声：另一位英雄王（首版）](./首版设定集/18-Fire-Emblem-Echoes-Shadows-of-Valentia.md) / 高级战争 / 前线任务1st / FFTA2 / Fell Seal / P5T / 韦诺之战
 
 ---
 
